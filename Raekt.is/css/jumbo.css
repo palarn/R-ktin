@@ -69,7 +69,7 @@ ul{
         width: 100%;
         text-align: center;
         opacity: 0;
-        color: #fff;
+        color: #662d91;
         -webkit-animation: titleAnimation 36s linear infinite 0s;
         -moz-animation: titleAnimation 36s linear infinite 0s;
         -o-animation: titleAnimation 36s linear infinite 0s;
@@ -78,7 +78,7 @@ ul{
     }
     .cb-slideshow li div h3 { 
         font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
-        font-size: 240px;
+        font-size: 140px;
         padding: 0;
         line-height: 200px; 
     }
