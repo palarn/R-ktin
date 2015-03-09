@@ -1,6 +1,5 @@
 /*
-Code Author: Mark-Anthony Karam
-Host: mark-anthony.ca
+Helga Lóa Kristjánsdóttir, 8. mars 2015
 */
 
 @import url(http://fonts.googleapis.com/css?family=Oswald);
@@ -11,11 +10,11 @@ h1
 font-family: 'Oswald', sans-serif;
 font-size: 30px;
 text-transform: uppercase;
-color: #216182;
+color: #662d91;
 }
 
 
-/* Centres the page (this could be container)*/
+/*miðjustilling*/
 .body {
     display:block;
     margin:0 auto;
@@ -26,7 +25,7 @@ color: #216182;
 }
 
 
-/* Labels are titles for the text fields. You can use a placeholder instead if you like*/
+/* titill á textaboxum */
 label 
 {
     display:block;
@@ -34,14 +33,14 @@ label
     letter-spacing:2px;
 }
 
-/* Centres the form within the page */
+/* miðjustillir fyrir hverja síðu */
 form 
 {
     margin:0 auto;
     width:459px;
 }
 
-/* Styles the text boxes */
+/* stíllinn á textaboxunum */
 input, textarea, file {
 	width:439px;
 	height:27px;
@@ -57,10 +56,10 @@ input, textarea, file {
 }
 
 	input:focus, textarea:focus {
-		border:1px solid #97d6eb;
+		border:1px solid #662d91;
 	}
 
-/* Styles the text area boxes (message field) */	
+/* skilaboðaformið */	
 textarea 
 {
 	height:213px;
@@ -68,7 +67,7 @@ textarea
 }
 
 
-/* Styles the submit button */
+/* stíll á senda takkanum */
 #submit {
 	/* background:url(images/submit.png); */
 	width:127px;
@@ -80,14 +79,14 @@ textarea
 	cursor:pointer;
 }
 
-/* Styles the submit hover */	
+/* stíll á senda hover */	
 #submit:hover {
 	color:#fff;
-	background-color: #216182;
+	background-color: #662d91;
 	opacity:0.9;
 }
 
-/* Styles the cancel button*/	
+/* stíll á hætta við takkanum*/	
 #cancel {
 	/* background:url(images/cancel.png); */
 	width:127px;
@@ -99,7 +98,7 @@ textarea
 	cursor:pointer;
 }
 
-/* Styles the cancel hover */
+/* stíll á hætta við hover */
 #cancel:hover {
 	color:#fff;
 	background-color: #000;
