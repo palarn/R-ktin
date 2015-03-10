@@ -1,3 +1,4 @@
+<!-- Helga Lóa, 10. mars 2015 -->
 <?php
     $name = $_POST['name'];
     $email = $_POST['email'];
