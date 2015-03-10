@@ -1,6 +1,7 @@
 $(document).ready(function() {
 	var stodvar;
 	var count = 0;
+	var amount1, amount2;
 	$.getJSON('stodvar.json',function(data){
 		stodvar = data;
 		for (var i=0; i<data.length; i++)
@@ -38,12 +39,17 @@ $(document).ready(function() {
 					html += '<div class="stadsetning">' + '<p>Staðsetning:'+ detailData['stadsetning'] + '</p>'+'</div>';
 					html += '<div class="hoptimar">' + '<p>Fjöldi hóptíma:'+ detailData['hoptimar'] + '</p>'+'</div>';
 					html += '<div class="staerd">' + '<p>Stærð í fermetrum:'+ detailData['staerd'] + '</p>'+'</div>';
-
+				if (count==0) {
+					amount1=detailData['1man'];
+				}
+				if (count==1) {
+					amount2=detailData['1man'];
+				}
 			var mismunur = $(event.currentTarget).children('a').attr('id');
 			$.getJSON('details/'+ stodvar[mismunur].id+'.json',function(detailData){
 				var gogn = '<div class="stodvar">';
 					gogn += '<h3>Mismunur</h3>';
-					gogn += '<div class="1man" id="upplysingar">'+'<p>1 mánuður:' + (detailData['1man']-detailData['1man']) +' krónur'+ '</p>'+'</div>';
+					gogn += '<div class="1man" id="upplysingar">'+'<p>1 mánuður:' + (amount1-amount2) +' krónur'+ '</p>'+'</div>';
 
 			if (count==0) {
 				$('#upplysingar').append(html);			
