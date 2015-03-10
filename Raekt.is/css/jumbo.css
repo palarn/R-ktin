@@ -15,7 +15,7 @@ html, body{
   background-position:center center;
   position: fixed;
   width: 100%;
-  height: 100%; /*same height as jumbotron */
+  height: 100%; /*sama hæð og jumbotron */
   top:0;
   left:0;
   z-index: -1;
@@ -77,7 +77,8 @@ ul{
         animation: titleAnimation 36s linear infinite 0s; 
     }
     .cb-slideshow li div h3 { 
-        font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+        font-family: Avant Garde,Avantgarde,Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+        /*font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;*/
         font-size: 140px;
         padding: 0;
         line-height: 200px; 
@@ -160,7 +161,7 @@ ul{
         -ms-animation-delay: 30s;
         animation-delay: 30s; 
     }
-    /* Animation for the slideshow images */
+    /* Animation fyrir slide showið */
     @-webkit-keyframes imageAnimation { 
         0% { opacity: 0;
         -webkit-animation-timing-function: ease-in; }
@@ -206,7 +207,7 @@ ul{
         25% { opacity: 0 }
         100% { opacity: 0 }
     }
-    /* Animation for the title */
+    /* Animation fyrir textann á slideshowinu */
     @-webkit-keyframes titleAnimation { 
         0% { opacity: 0 }
         8% { opacity: 1 }
@@ -242,7 +243,7 @@ ul{
         19% { opacity: 0 }
         100% { opacity: 0 }
     }
-    /* Show at least something when animations not supported */
+    /* Sýna þetta ef animation er ekki stutt */
     .no-cssanimations .cb-slideshow li span{
       opacity: 1;
     }
