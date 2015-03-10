@@ -9,7 +9,7 @@
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/header_footer.css" rel="stylesheet">
 		<link href="css/jumbo.css" rel="stylesheet">
-
+		<link href="css/raekt1.css" rel="stylesheet">
 
 	</head>
 	<body>
@@ -17,6 +17,7 @@
 		<script src = "js/jquery-1.11.2.min.js"></script>
 		<script src = "js/bootstrap.js"></script>
 		<script src = "js/jumbo.js"></script>
+		<script type="text/javascript" src="verkefni4.js"></script>
 
 
 		<div class ="navbar navbar-default navbar-static-top">
@@ -37,11 +38,13 @@
 					<ul class="nav navbar-nav navbar-right">
 					
 						<li><a href="index.html">Heim</a></li>
-						<li class="active"><a href="#">Samanburdur</a></li>
-						<li class="dropdown">
+						<li><a href="samanburdur.html">Samanburdur</a></li>
+						<li class="dropdown active">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Ræktir <b class="caret"></b></a>
 							<ul class="dropdown-menu">
-								<li><a href="raekt1.html">Rækt 1</a></li>
+								<li class="active"><a href="#">Rækt 1</a>
+									
+								</li>
 								<li><a href="raekt2.html">Rækt 2</a></li>
 								<li><a href="raekt3.html">Rækt 3</a></li>
 								<li><a href="raekt4.html">Rækt 4</a></li>
@@ -54,34 +57,22 @@
 			</div>
 		</div>
 
-		<!--Samanburður form, Axel Lárusson, 8. mars 2015 -->
-		<section class="body">       	        
-	   	<label>
-		    <p><h3>Stöðvar:</h3></p>
-		</label>
-	    	<p>Stöð 1 <input type ="checkbox" name = "stod_1" id = "Stöð 1"/></p>
-	    	<p>Stöð 2 <input type ="checkbox" name = "stod_2" id = "Stöð 2"/></p>
-	    	<p>Stöð 3 <input type ="checkbox" name = "stod_3" id = "Stöð 3"/></p>
-		<p>Stöð 4 <input type ="checkbox" name = "stod_4" id = "Stöð 4"/></p>
-		    
-		<label>
-		    <p><h3>Tegund samanburðar:</h3></p>
-		</label>
-	    	<p>samanb. 1 <input type ="checkbox" name = "samanb_1" id = "1"/></p>
-	    	<p>samanb. 2 <input type ="checkbox" name = "samanb_2" id = "2"/></p>
-	    	<p>samanb. 3 <input type ="checkbox" name = "samanb_3" id = "3"/></p>
-	    	<p>samanb. 4 <input type ="checkbox" name = "samanb_4" id = "4"/></p>		   
 
-		            
-		<input id="submit" name="submit" type="submit" value="Bera saman">
-	        
-	   
-		</section>	
-		
 
 <div class="container">
 	<div class="row">
-      <div class="col-md-12 text-center"><p>The End.</p></div>
+			<div class="col-md-3 col-sm-6" id ="listi">	</div>
+						<div class="col-md-3 col-sm-6">	
+							<div class="col-md-3 col-sm-6 fixed" id ="upplysingar"></div>
+						</div>
+						<div class="col-md-3 col-sm-6">	
+							<div class="col-md-3 col-sm-6 fixed" id ="upplysingar2"></div>
+						</div>
+						<div class="col-md-3 col-sm-6">	
+							<div class="col-md-3 col-sm-6 fixed" id ="upplysingar3"></div>
+						</div>
+
+
     </div>
 </div>
 
