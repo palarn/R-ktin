@@ -1,3 +1,6 @@
+
+<!--Helga Lóa Kristjánsdóttir, 8. mars 2015-->
+
 <?php
     $name = $_POST['name'];
     $email = $_POST['email'];
