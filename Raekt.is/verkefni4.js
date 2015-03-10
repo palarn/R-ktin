@@ -1,5 +1,6 @@
 $(document).ready(function() {
 	var stodvar;
+	var count = 0;
 	$.getJSON('stodvar.json',function(data){
 		stodvar = data;
 		for (var i=0; i<data.length; i++)
@@ -11,7 +12,12 @@ $(document).ready(function() {
 		}
 		$('#listi p').click(function(event) {
 			event.preventDefault();
-			$('#upplysingar').empty();
+			if (count==0) {
+				$('#upplysingar').empty();
+			}
+			if (count==0 || count==1) {
+				$('#upplysingar2').empty();
+			}
 			var itemId = $(event.currentTarget).children('a').attr('id');
 			$.getJSON('details/'+ stodvar[itemId].id+'.json',function(detailData){
 				var html = '<div class="stodvar">';					  
@@ -23,9 +29,18 @@ $(document).ready(function() {
 					html += '<div class="stadsetning">' + '<p>Staðsetning:'+ detailData['stadsetning'] + '</p>'+'</div>';
 					html += '<div class="hoptimar">' + '<p>Fjöldi hóptíma:'+ detailData['hoptimar'] + '</p>'+'</div>';
 					html += '<div class="staerd">' + '<p>Stærð í fermetrum:'+ detailData['staerd'] + '</p>'+'</div>';
-					$('#upplysingar').append(html);
-				});
-			});						
+			if (count==0) {
+				$('#upplysingar').append(html);			
+				}
+			if (count==1) {
+				$('#upplysingar2').append(html);				
+				}
+			if (count<1) {
+				count++;
+				}
+			else count = 0;
+			});
+		});	
 		return false;
 	});
 });
