@@ -44,6 +44,7 @@ $(document).ready(function() {
 					html += '<div class="stadsetning">' + '<p>Staðsetning:'+ detailData['stadsetning'] + '</p>'+'</div>';
 					html += '<div class="hoptimar">' + '<p>Fjöldi hóptíma:'+ detailData['hoptimar'] + '</p>'+'</div>';
 					html += '<div class="staerd">' + '<p>Stærð í fermetrum:'+ detailData['staerd'] + '</p>'+'</div>';
+					html += '</div>';
 				//Þurftum að setja counter á variables fyrir verðsamanburðinn
 				if (count==0) {
 					amount1=detailData['1man'];
@@ -66,6 +67,8 @@ $(document).ready(function() {
 					gogn += '<div class="3man" id="upplysingar">'+'<p>3 mánuður:' + (amount3-amount4) +' krónur'+ '</p>'+'</div>';
 					gogn += '<div class="6man" id="upplysingar">'+'<p>6 mánuður:' + (amount5-amount6) +' krónur'+ '</p>'+'</div>';
 					gogn += '<div class="arskort" id="upplysingar">'+'<p>Árskort:' + (amount7-amount8) +' krónur'+ '</p>'+'</div>';
+					gogn += '</div>';
+					
 			//Setur hluti úr .json skrám inn í upplysingar
 			if (count==0) {
 				$('#upplysingar').append(html);			
