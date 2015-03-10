@@ -1,10 +1,10 @@
 {
 	"stodvarid": "h2",
 	"staerd": " fm",
-	"1man": "12,990",
-	"3man": "26,990",
-	"6man": "36,990",
-	"arskort": "71,990",
+	"1man": 12990,
+	"3man": 26990,
+	"6man": 36990,
+	"arskort": 71990,
 	"stadsetning": "Ásvellir, Hafnarfjörður",
 	"hoptimar": "15",
 	"title": "Hress - Ásvellir"

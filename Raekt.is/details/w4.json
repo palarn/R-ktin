@@ -1,10 +1,10 @@
 {
 	"stodvarid": "w1",
 	"staerd": "200 fm",
-	"1man": "11,430",
-	"3man": "31,190",
-	"6man": "54,590",
-	"arskort": "79,990",
+	"1man": 11430,
+	"3man": 31190,
+	"6man": 54590,
+	"arskort": 79990,
 	"stadsetning": "Háskóli Reykjavíkur, Reykjavík",
 	"hoptimar": "25",
 	"title": "World Class - HR"

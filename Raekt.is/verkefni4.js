@@ -43,7 +43,7 @@ $(document).ready(function() {
 			$.getJSON('details/'+ stodvar[mismunur].id+'.json',function(detailData){
 				var gogn = '<div class="stodvar">';
 					gogn += '<h3>Mismunur</h3>';
-					gogn += '<div class="1man" id="upplysingar">'+'<p>1 mánuður:' + detailData['1man']-detailData['1man']+' krónur'+ '</p>'+'</div>';
+					gogn += '<div class="1man" id="upplysingar">'+'<p>1 mánuður:' + (detailData['1man']-detailData['1man']) +' krónur'+ '</p>'+'</div>';
 
 			if (count==0) {
 				$('#upplysingar').append(html);			
