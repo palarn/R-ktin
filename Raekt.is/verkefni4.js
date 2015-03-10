@@ -1,3 +1,6 @@
+//Notkun: ready.function()
+//Fyrir:  tekur inn objects úr .json skrá
+//Eftir:  Búið er að senda viðeigandi object á classa
 $(document).ready(function() {
 	var stodvar;
 	var count = 0;
@@ -13,7 +16,9 @@ $(document).ready(function() {
 		}
 
 
-		
+		//Notkun: click.function()
+		//Fyrir:  Ekkert
+		//Eftir:  Búið er að tæma upplysingar classa
 		$('#listi p').click(function(event) {
 			event.preventDefault();
 
@@ -27,7 +32,7 @@ $(document).ready(function() {
 				$('#upplysingar3').empty();
 			}
 
-
+			//nær í hluti úr .json skrám og gerir þá tilbúna að birtast í html'inu
 			var itemId = $(event.currentTarget).children('a').attr('id');
 			$.getJSON('details/'+ stodvar[itemId].id+'.json',function(detailData){
 				var html = '<div class="stodvar">';					  
@@ -39,6 +44,7 @@ $(document).ready(function() {
 					html += '<div class="stadsetning">' + '<p>Staðsetning:'+ detailData['stadsetning'] + '</p>'+'</div>';
 					html += '<div class="hoptimar">' + '<p>Fjöldi hóptíma:'+ detailData['hoptimar'] + '</p>'+'</div>';
 					html += '<div class="staerd">' + '<p>Stærð í fermetrum:'+ detailData['staerd'] + '</p>'+'</div>';
+				//Þurftum að setja counter á variables fyrir verðsamanburðinn
 				if (count==0) {
 					amount1=detailData['1man'];
 					amount3=detailData['3man'];
@@ -51,7 +57,7 @@ $(document).ready(function() {
 					amount6=detailData['6man'];
 					amount8=detailData['arskort'];
 				}
-
+			//nær í hluti úr sitthvorum .json skjalinu sem búið er að smella á 
 			var mismunur = $(event.currentTarget).children('a').attr('id');
 			$.getJSON('details/'+ stodvar[mismunur].id+'.json',function(detailData){
 				var gogn = '<div class="stodvar">';
@@ -60,13 +66,15 @@ $(document).ready(function() {
 					gogn += '<div class="3man" id="upplysingar">'+'<p>3 mánuður:' + (amount3-amount4) +' krónur'+ '</p>'+'</div>';
 					gogn += '<div class="6man" id="upplysingar">'+'<p>6 mánuður:' + (amount5-amount6) +' krónur'+ '</p>'+'</div>';
 					gogn += '<div class="arskort" id="upplysingar">'+'<p>Árskort:' + (amount7-amount8) +' krónur'+ '</p>'+'</div>';
-
+			//Setur hluti úr .json skrám inn í upplysingar
 			if (count==0) {
 				$('#upplysingar').append(html);			
 				}
+			//Setur hluti úr .json skrám inn í upplysingar
 			if (count==1) {
 				$('#upplysingar2').append(html);				
 				}
+			//Setur hluti úr .json skrám sem búið er að bera saman og reikna verðsamanburð
 			if (count==1) {
 				$('#upplysingar3').append(gogn);				
 				}
