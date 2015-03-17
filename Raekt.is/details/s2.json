@@ -1,11 +1,11 @@
 {
 	"stodvarid": "s2",
-	"staerd": "7000 fm",
+	"staerd": 7000,
 	"1man": 13900,
 	"3man": 29900,
 	"6man": 49900,
 	"arskort": 78990,
 	"stadsetning": "Kópavogur",
-	"hoptimar": "25",
+	"hoptimar": 25,
 	"title": "Sporthúsið - Kópavogur"
 }

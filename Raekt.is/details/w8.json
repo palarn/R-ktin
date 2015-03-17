@@ -1,11 +1,11 @@
 {
 	"stodvarid": "w1",
-	"staerd": "2000 fm",
+	"staerd": 2000,
 	"1man": 11430,
 	"3man": 31190,
 	"6man": 54590,
 	"arskort": 79990,
 	"stadsetning": "Seltjarnarnes",
-	"hoptimar": "25",
+	"hoptimar": 25,
 	"title": "World Class - Seltjarnarnes"
 }

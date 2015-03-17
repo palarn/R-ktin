@@ -5,6 +5,9 @@ Helga Lóa Kristjánsdóttir, 8. mars 2015
 @import url(http://fonts.googleapis.com/css?family=Oswald);
 @import url(http://fonts.googleapis.com/css?family=Muli:300);
 
+.modal{
+	    z-index: 1000; 
+}
 h1
 {
 font-family: 'Oswald', sans-serif;
@@ -15,7 +18,7 @@ color: #662d91;
 
 
 /*miðjustilling*/
-.body {
+.formBody {
     display:block;
     margin:0 auto;
     width:576px;
