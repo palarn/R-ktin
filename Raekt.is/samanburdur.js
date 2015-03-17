@@ -4,7 +4,7 @@
 $(document).ready(function() {
 	var stodvar;
 	var count = 0;
-	var amount1, amount2, amount3, amount4, amount5, amount6, amount7, amount8;
+	var amount1, amount2, amount3, amount4, amount5, amount6, amount7, amount8, amount9, amount10, amount11, amount12;
 	$.getJSON('stodvar.json',function(data){
 		stodvar = data;
 		for (var i=0; i<data.length; i++)
@@ -44,19 +44,23 @@ $(document).ready(function() {
 					html += '<div class="stadsetning">' + '<p>Staðsetning:'+ detailData['stadsetning'] + '</p>'+'</div>';
 					html += '<div class="hoptimar">' + '<p>Fjöldi hóptíma:'+ detailData['hoptimar'] + '</p>'+'</div>';
 					html += '<div class="staerd">' + '<p>Stærð í fermetrum:'+ detailData['staerd'] + '</p>'+'</div>';
-					html += '</div>';
+					
 				//Þurftum að setja counter á variables fyrir verðsamanburðinn
 				if (count==0) {
 					amount1=detailData['1man'];
 					amount3=detailData['3man'];
 					amount5=detailData['6man'];
 					amount7=detailData['arskort'];
+					amount9=detailData['hoptimar'];
+					amount11=detailData['staerd'];
 				}
 				if (count==1) {
 					amount2=detailData['1man'];
 					amount4=detailData['3man'];
 					amount6=detailData['6man'];
 					amount8=detailData['arskort'];
+					amount10=detailData['hoptimar'];
+					amount12=detailData['staerd'];
 				}
 			//nær í hluti úr sitthvorum .json skjalinu sem búið er að smella á 
 			var mismunur = $(event.currentTarget).children('a').attr('id');
@@ -67,8 +71,9 @@ $(document).ready(function() {
 					gogn += '<div class="3man" id="upplysingar">'+'<p>3 mánuður:' + (amount3-amount4) +' krónur'+ '</p>'+'</div>';
 					gogn += '<div class="6man" id="upplysingar">'+'<p>6 mánuður:' + (amount5-amount6) +' krónur'+ '</p>'+'</div>';
 					gogn += '<div class="arskort" id="upplysingar">'+'<p>Árskort:' + (amount7-amount8) +' krónur'+ '</p>'+'</div>';
-					gogn += '</div>';
-					
+					gogn += '<div class="hoptimar" id="upplysingar">'+'<p>Fjöldi hóptíma:' + (amount9-amount10) +' hóptímar'+ '</p>'+'</div>';
+					gogn += '<div class="staerd" id="upplysingar">'+'<p>Stærð húsnæðis:' + (amount11-amount12) +' fermetrar'+ '</p>'+'</div>';
+
 			//Setur hluti úr .json skrám inn í upplysingar
 			if (count==0) {
 				$('#upplysingar').append(html);			

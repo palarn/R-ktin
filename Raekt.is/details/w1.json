@@ -1,11 +1,11 @@
 {
 	"stodvarid": "w1",
-	"staerd": "7500 fm",
+	"staerd": 7500,
 	"1man": 11430,
 	"3man": 31190,
 	"6man": 54590,
 	"arskort": 79990,
 	"stadsetning": "Laugar, Reykjavík",
-	"hoptimar": "25",
+	"hoptimar": 25,
 	"title": "World Class - Laugar"
 }

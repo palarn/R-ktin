@@ -1,11 +1,11 @@
 {
 	"stodvarid": "w1",
-	"staerd": "1100 fm",
+	"staerd": 1100,
 	"1man": 11430,
 	"3man": 31190,
 	"6man": 54590,
 	"arskort": 79990,
 	"stadsetning": "Ögurhvarf, Kópavogur",
-	"hoptimar": "25",
+	"hoptimar": 25,
 	"title": "World Class - Ögurhvarf"
 }
