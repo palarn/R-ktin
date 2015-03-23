@@ -5,13 +5,13 @@ $(document).ready(function() {
 	var stodvar;
 	var count = 0;
 	var amount1, amount2, amount3, amount4, amount5, amount6, amount7, amount8, amount9, amount10, amount11, amount12;
-	$.getJSON('stodvar.json',function(data){
+	$.getJSON('details/stodvar.json',function(data){
 		stodvar = data;
 		for (var i=0; i<data.length; i++)
 		{ 
 			var el = $('<p>');
 			el.append('<a href="#" id=' + i + '><p>'+ data[i].title +'</p></a>');
-			el.append('<div><class="checkbox" id='+ data[i].id + i +' name="myCheckbox"/><label><input type="checkbox"></label>Bera saman</div>');
+			
 			$('#listi').append(el);
 		}
 
@@ -67,12 +67,13 @@ $(document).ready(function() {
 			$.getJSON('details/'+ stodvar[mismunur].id+'.json',function(detailData){
 				var gogn = '<div class="stodvar">';
 					gogn += '<h3>Mismunur</h3>';
-					gogn += '<div class="1man" id="upplysingar">'+'<p>1 mánuður:' + (amount1-amount2) +' krónur'+ '</p>'+'</div>';
-					gogn += '<div class="3man" id="upplysingar">'+'<p>3 mánuður:' + (amount3-amount4) +' krónur'+ '</p>'+'</div>';
-					gogn += '<div class="6man" id="upplysingar">'+'<p>6 mánuður:' + (amount5-amount6) +' krónur'+ '</p>'+'</div>';
-					gogn += '<div class="arskort" id="upplysingar">'+'<p>Árskort:' + (amount7-amount8) +' krónur'+ '</p>'+'</div>';
-					gogn += '<div class="hoptimar" id="upplysingar">'+'<p>Fjöldi hóptíma:' + (amount9-amount10) +' hóptímar'+ '</p>'+'</div>';
-					gogn += '<div class="staerd" id="upplysingar">'+'<p>Stærð húsnæðis:' + (amount11-amount12) +' fermetrar'+ '</p>'+'</div>';
+					gogn += '<div class="1man" '+'<p>1 mánuður:' + (amount1-amount2) +' krónur'+ '</p>'+'</div>';
+					gogn += '<div class="3man" '+'<p>3 mánuður:' + (amount3-amount4) +' krónur'+ '</p>'+'</div>';
+					gogn += '<div class="6man" '+'<p>6 mánuður:' + (amount5-amount6) +' krónur'+ '</p>'+'</div>';
+					gogn += '<div class="arskort" '+'<p>Árskort:' + (amount7-amount8) +' krónur'+ '</p>'+'</div>';
+					gogn += '<div class="hoptimar" '+'<p>Fjöldi hóptíma:' + (amount9-amount10) +' hóptímar'+ '</p>'+'</div>';
+					gogn += '<div class="staerd" '+'<p>Stærð húsnæðis:' + (amount11-amount12) +' fermetrar'+ '</p>'+'</div>';
+
 
 			//Setur hluti úr .json skrám inn í upplysingar
 			if (count==0) {

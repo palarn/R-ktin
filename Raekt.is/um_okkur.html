@@ -9,15 +9,20 @@
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/header_footer.css" rel="stylesheet">
 		<link href="css/jumbo.css" rel="stylesheet">
+		<link href="css/sort.css" rel="stylesheet">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<link type="text/css" rel="stylesheet" href="css/styles.css">
 
 	</head>
 	<body>
+		<script src = "js/angular/angular.js"></script>
 		<script src = "http://code.jquery.com/jquery-1.11.2.min.js"></script>
 		<script src = "js/jquery-1.11.2.min.js"></script>
 		<script src = "js/bootstrap.js"></script>
 		<script src = "js/jumbo.js"></script>
+		<script src = "js/sort.js"></script>
+
+
 
 
 		<div class ="navbar navbar-default navbar-static-top">
@@ -55,14 +60,106 @@
 			</div>
 		</div>
 
-		
-		
 
-<div class="container">
-	<div class="row">
-      <div class="col-md-12 text-center"><p>The End.</p></div>
-    </div>
+
+
+		
+<script>
+    var myApp = angular.module("myApp",[]);
+
+	myApp.factory("Gyms", function(){
+	    var Gyms = {};
+        
+	    Gyms.data = [
+	        {
+	            name: "World Class",
+	            einnman: 11430,
+	            thrirman: 31190,
+	            sexman: 54590,
+				arskort: 79990,
+				hoptimar: 25
+	        },
+	        {
+	            name: "Hress",
+	            einnman: 12990,
+	            thrirman: 26990,
+	            sexman: 36990,
+				arskort: 71990,
+				hoptimar: 15
+	        },
+	        {
+	            name: "Sporthúsið",
+	            einnman: 13900,
+	            thrirman: 29900,
+	            sexman: 49900,
+				arskort: 78990,
+				hoptimar: 25
+	        },
+	        {
+	            name: "Reebok",
+	            einnman: 6540,
+	            thrirman: 0,
+	            sexman: 36990,
+				arskort: 65400,
+				hoptimar: 31
+	        },
+	        {
+	            name: "Hreyfing",
+	            einnman: 14900,
+	            thrirman: 39900,
+	            sexman: 64900,
+				arskort: 97092,
+				hoptimar: 25
+	        }
+	    ];
+	    return Gyms;
+	});
+
+	function GymsCtrl($scope, Gyms){
+	    $scope.gyms = Gyms;
+        $scope.sort = {
+            column: '',
+            descending: false
+        };    
+        $scope.changeSorting = function(column) {
+
+            var sort = $scope.sort;
+ 
+            if (sort.column == column) {
+                sort.descending = !sort.descending;
+            } else {
+                sort.column = column;
+                sort.descending = false;
+            }
+        };
+	}
+</script>
+
+<div ng-app="myApp">
+	<div ng-controller="GymsCtrl">
+        <h2>Líkamsræktir:</h2>
+		<table cellspacing="0">
+			<tr class="first">
+				<th class="first" ng-click="changeSorting('name')">Nafn</th>
+				<th ng-click="changeSorting('einnman')">1 mánuður</th>
+				<th ng-click="changeSorting('thrirman')">3 mánuðir</th>
+				<th ng-click="changeSorting('sexman')">6 mánuðir</th>
+				<th ng-click="changeSorting('arskort')">Árskort</th>
+				<th ng-click="changeSorting('hoptimar')">Hóptímar</th>
+			</tr>
+			<tr ng-repeat="gym in gyms.data|orderBy:sort.column:sort.descending">
+				<td class="first">{{gym.name}}</td>
+				<td>{{gym.einnman}}</td>
+				<td>{{gym.thrirman}}</td>
+				<td>{{gym.sexman}}
+				<td>{{gym.arskort}}
+				<td>{{gym.hoptimar}}</td>
+			</tr>
+        </table>
+	</div>
 </div>
+
+
 
 
 		<div class="navbar navbar-default navbar-fixed-bottom">
