@@ -1,3 +1,4 @@
+/* Axel Lárusson - SQL gagnagrunnur */
 BEGIN TRANSACTION;
 CREATE TABLE "Stodvar" (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
