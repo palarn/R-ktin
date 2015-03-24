@@ -3,7 +3,7 @@
 //Eftir:  Búið er að senda viðeigandi object á classa
 $(document).ready(function() {
 	var stodvar;
-	$.getJSON('details/hstodvar.json',function(data){
+	$.getJSON('details/hrstodvar.json',function(data){
 		stodvar = data;
 		for (var i=0; i<data.length; i++)
 		{ 
