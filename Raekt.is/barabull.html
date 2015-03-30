@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<title>Admin </title>
+	</head>
+<body>
+
+<?php
+//tengjast hostinum
+	if(isset($_POST['update']))
+	{
+		$dbhost = 'localhost';
+		$dbuser = 'root';
+		$dbpass = '';
+		$conn = mysql_connect($dbhost, $dbuser, $dbpass);
+			if(! $conn )
+				{
+			  die('Could not connect: ' . mysql_error());
+				}
+		//variable í töflunni
+		$id = $_POST['id'];
+		$title = $_POST['title'];
+
+
+
+		//update'um töfluna
+		$sql = "UPDATE stodvar ".
+    	   "SET title = $title ".
+    	   "WHERE id = $id" ;
+
+		mysql_select_db('mygym');
+		$retval = mysql_query( $sql, $conn );
+			if(! $retval )
+				{
+			  die('Could not update data: ' . mysql_error());
+				}
+					echo "Updated data successfully\n";
+					mysql_close($conn);
+				}
+			else
+				{
+?>
+<form method="post" action="database\SQlite test\db\lol.sql">
+	<table width="400" border="0" cellspacing="1" cellpadding="2">
+	<tr>
+		<td width="100">Raekt ID</td>
+		<td><input name="id" type="text" id="emp_id"></td>
+	</tr>
+	<tr>
+		<td width="100">title</td>
+		<td><input name="title" type="text" id="title"></td>
+	</tr>
+	<td>
+		<input name="update" type="submit" id="update" value="Update">
+	</td>
+	</table>
+</form>
+<?php
+	}
+?>
+</body>
+</html>
