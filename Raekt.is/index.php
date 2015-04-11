@@ -1,64 +1,10 @@
 <!-- Páll Arnar Pálsson, 17. febrúar 2015 -->
+<?php
 
-<!DOCTYPE html>
-<html lang="is">
-	<head>
-		<meta charset="utf-8">
-		<title>Rækt.is</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="css/header_footer.css" rel="stylesheet">
-		<link href="css/jumbo.css" rel="stylesheet">
+	$site_name=basename(__FILE__);
+	include 'sub/header.php';
 
-
-	</head>
-	<body>
-		<script src = "http://code.jquery.com/jquery-1.11.2.min.js"></script>
-		<script src = "js/jquery-1.11.2.min.js"></script>
-		<script src = "js/bootstrap.js"></script>
-		<script src = "js/jumbo.js"></script>
-
-
-
-		<div class ="navbar navbar-default navbar-fixed-top">
-			<div class="container">
-				
-				
-
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a href="#" class="navbar-brand">Rækt.is</a>
-				</div>
-				<div class="collapse navbar-collapse navHeaderCollapse">
-					
-					<ul class="nav navbar-nav navbar-right text-center">
-					
-						<li class="active"><a href="#">Heim</a></li>
-						<li><a href="samanburdur.html">Samanburður</a></li>
-						<li class="dropdown">
-
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Ræktir <b class="caret"></b></a>
-							<ul class="dropdown-menu">
-							
-								<li><a href="raekt1.html">World Class</a></li>
-								<li><a href="raekt2.html">Hress</a></li>
-								<li><a href="raekt3.html">Sporthúsið</a></li>
-								<li><a href="raekt4.html">Reebok Fitness</a></li>
-								<li><a href="raekt5.html">Hreyfing</a></li>
-							</ul>
-						</li>
-						<li><a href="um_okkur.html">Röðunartafla</a></li>
-					</ul>
-
-				</div>
-			</div>
-		</div>
-
-		
+	echo'	
 		<div class="jumbotron text-center">
 		  <!--<h1>Rækt.is</h1>
 			<p>Við hjálpum til við að finna líkamsrætarstöð sem hentar þér!</p>
@@ -128,15 +74,8 @@
 		  </div>
 		  <hr>
 		</div>
-		 
+		 ';
 
+		 include 'sub/footer.php';
 
-		<div class="navbar navbar-default navbar-static-bottom">
-			<div class="container">
-				<p class="navbar-text pull-left">Síða eftir hóp 24</p>
-				<a class="navbar-btn btn-default btn pull-right" href="contact.html">Hafðu samband</a>
-			</div>
-		</div>
-
-	</body>
-<html/>
+?>
