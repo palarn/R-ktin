@@ -1,7 +1,7 @@
 <?php
 	echo'	<div class="navbar navbar-default navbar-static-bottom">
 				<div class="container">
-					<p class="navbar-text pull-left">Síða eftir hóp 24</p>
+					<a class="navbar-btn btn-default btn pull-left" href="login/index.php">Síða eftir hóp 24</a>
 					<a class="navbar-btn btn-default btn pull-right" href="#contact" data-toggle="modal">Hafðu samband</a>
 				</div>
 			</div>

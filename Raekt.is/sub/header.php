@@ -4,7 +4,7 @@ echo'
 <html lang="is">
 	<head>
 		<meta charset="utf-8">
-		<title>Raekt</title>
+		<title>Raekt.com</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/header_footer.css" rel="stylesheet">
@@ -39,7 +39,7 @@ echo'
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a href="#" class="navbar-brand">Rækt.is</a>
+					<a href="index.php" class="navbar-brand">Rækt.com</a>
 				</div>
 				<div class="collapse navbar-collapse navHeaderCollapse">
 					
@@ -51,14 +51,14 @@ echo'
 						<li>
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Ræktir <b class="caret"></b></a>
 							<ul class="dropdown-menu">
-								<li><a href="raekt1.html">World Class</a></li>
-								<li><a href="raekt2.html">Hress</a></li>
-								<li><a href="raekt3.html">Sporthúsið</a></li>
-								<li><a href="raekt4.html">Reebok Fitness</a></li>
-								<li><a href="raekt5.html">Hreyfing</a></li>
+								<li><a href="raekt1.php">World Class</a></li>
+								<li><a href="raekt2.php">Hress</a></li>
+								<li><a href="raekt3.php">Sporthúsið</a></li>
+								<li><a href="raekt4.php">Reebok Fitness</a></li>
+								<li><a href="raekt5.php">Hreyfing</a></li>
 							</ul>
 						</li>
-						<li';  if($site_name=="um_okkur.php"){echo ' class="dropdown active"';} echo '><a href="um_okkur.html">Röðunartafla</a></li>
+						<li';  if($site_name=="um_okkur.php"){echo ' class="dropdown active"';} echo '><a href="um_okkur.php">Röðunartafla</a></li>
 					</ul>
 
 				</div>
