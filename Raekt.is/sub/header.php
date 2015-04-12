@@ -58,7 +58,7 @@ echo'
 								<li><a href="raekt5.php">Hreyfing</a></li>
 							</ul>
 						</li>
-						<li';  if($site_name=="um_okkur.php"){echo ' class="dropdown active"';} echo '><a href="um_okkur.php">Röðunartafla</a></li>
+						<li';  if($site_name=="um_okkur.php"){echo ' class="dropdown active"';} echo '><a href="um_okkur.php">Um Okkur</a></li>
 					</ul>
 
 				</div>
