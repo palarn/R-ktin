@@ -1,9 +1,4 @@
-<?php
-	require('authorization.php');
-	if($_SESSION['login' == 0]){
-		header ( 'Location: login.php ');
-	}
-?>
+
 
 <!DOCTYPE html>
 <html lang="is">

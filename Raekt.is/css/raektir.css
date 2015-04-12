@@ -1,10 +1,23 @@
 #up_container{
 	margin-left: 15%;
 	font-family: Avant Garde,Avantgarde,Century Gothic,CenturyGothic,AppleGothic,sans-serif;
-	font-size: 20px
+	font-size: 20px;
+	float: left;
+	width:40%;
 }
 
+#contcont
+{
+	margin-bottom: 11%;
+}
 
+#kort
+{
+	margin-left:20px;
+	float: left;
+	width:40%;
+	margin-bottom: 10%;
+}
 .img-rounded {
     width:100px;
     height:150px;
