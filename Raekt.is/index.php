@@ -1,79 +1,81 @@
-<!DOCTYPE html>
-<html lang="is">
-	<head>
-		<meta charset="utf-8">
-		<title>Rækt.is</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="css/header_footer.css" rel="stylesheet">
-		<link href="css/jumbo.css" rel="stylesheet">
-
-
-	</head>
-	<body>
-		<script src = "http://code.jquery.com/jquery-1.11.2.min.js"></script>
-		<script src = "js/jquery-1.11.2.min.js"></script>
-		<script src = "js/bootstrap.js"></script>
-		<script src = "js/jumbo.js"></script>
+<!-- Páll Arnar Pálsson, 17. febrúar 2015 -->
 <?php
-// Get a connection for the database
-require_once('mysqli_connect.php');
 
-// Create a query for the database
-$query = "SELECT title, 1man, 3man, 6man, 12man, staerd, stadur,
-hoptimar, postnr FROM stodvar";
+	$site_name=basename(__FILE__);
+	include 'sub/header.php';
 
-// Get a response from the database by sending the connection
-// and the query
-$response = @mysqli_query($dbc, $query);
+	echo'	
+		<div class="jumbotron text-center">
+		  <!--<h1>Rækt.is</h1>
+			<p>Við hjálpum til við að finna líkamsrætarstöð sem hentar þér!</p>
+		-->
+			
+		</div>
 
-// If the query executed properly proceed
-if($response){
+		<div class="bg">
+			<ul class="cb-slideshow">
+            <li><span>Image 01</span><div><h3>HÉR</h3></div></li>
+            <li><span>Image 02</span><div><h3>KOMA</h3></div></li>
+            <li><span>Image 03</span><div><h3>GÓÐAR</h3></div></li>
+            <li><span>Image 04</span><div><h3>OG</h3></div></li>
+            <li><span>Image 05</span><div><h3>GAGNLEGAR</h3></div></li>
+            <li><span>Image 06</span><div><h3>UPPLÝSINGAR</h3></div></li>
+        </ul>
+		</div>
 
-echo '<table align="left"
-cellspacing="5" cellpadding="8">
 
-<tr><td align="left"><b>Stöð</b></td>
-<td align="left"><b>1 mánuður</b></td>
-<td align="left"><b>3 mánuðir</b></td>
-<td align="left"><b>6 mánuðir</b></td>
-<td align="left"><b>12 mánuðir</b></td>
-<td align="left"><b>Stærð</b></td>
-<td align="left"><b>Staður</b></td>
-<td align="left"><b>Fjöldi hóptíma</b></td>
-<td align="left"><b>Póst númer</b></td></tr>';
+		<div class="container">
+		  <div class="row">
+			  	<div class="col-md-3 col-sm-6">
+			    	<h2>"Pilates breytti lífi mínu!"</h2>
+				    <p>Síðan hressoghraust.is tók viðtal við þúsundfjalasmiðinn Helgulóu um hvernig regluleg Pilates iðkun bætti bætti persónulega líðan og afkastasemi í vinnu. "Áður fyrr var hver dagur pína og kvöl en ég hef fengið nýja sýn á lífið!" segir Helgalóa</p>
+				    <a href="#" class="btn btn-default">Lesa meira</a>
+				    
+			    </div>
+			    <div class="col-md-3 col-sm-6">
+			    	<h2>Tekur 120 í bekk!</h2>
+				    <p>Nemendafélags mógúllinn Hrafnkell Áki kennir fólki hvernig á að taka almennilega á því í ræktinni og hvernig hægt sé að lyfta MINNST 120 í bekk. "Ekki vera aumingji". Keli sýnir handtökin við rétta pressu...</p>
+				    <a href="#" class="btn btn-default">Lesa meira</a>
+				    
+			    </div>
+			    <div class="col-md-3 col-sm-6">
+			    	<h2>Umsögn 3</h2>
+				    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. 
+				    Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis 
+				    dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. 
+				    Aliquam in felis sit amet augue.</p>
+				    <a href="#" class="btn btn-default">Lesa meira</a>
+				    
+			    </div>
+			    <div class="col-md-3 col-sm-6">
+			    	<h2>Umsögn 4</h2>
+				    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. 
+				    Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis 
+				    dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. 
+				    Aliquam in felis sit amet augue.</p>
+				    <a href="#" class="btn btn-default">Lesa meira</a>
+				    
+			    </div>
 
-// mysqli_fetch_array will return a row of data from the query
-// until no further data is available
-while($row = mysqli_fetch_array($response)){
+		  </div>
+		  <hr>
+		  <div class="row">
+		    <h2>Grein</h2>
+		    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. 
+		    Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis 
+		    dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. 
+		    Aliquam in felis sit amet augue.
+		    <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. 
+		    Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis 
+		    dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. 
+		    Aliquam in felis sit amet augue.</p>
+		    <a href="#" class="btn btn-default">Lesa</a>
+		    
+		  </div>
+		  <hr>
+		</div>
+		 ';
 
-echo '<tr><td align="left">' .
-$row['title'] . '</td><td align="left">' .
-$row['1man'] . '</td><td align="left">' .
-$row['3man'] . '</td><td align="left">' .
-$row['6man'] . '</td><td align="left">' .
-$row['12man'] . '</td><td align="left">' .
-$row['staerd'] . '</td><td align="left">' .
-$row['stadur'] . '</td><td align="left">' .
-$row['hoptimar'] . '</td><td align="left">' .
-$row['postnr'] . '</td><td align="left">';
-
-echo '</tr>';
-}
-
-echo '</table>';
-
-} else {
-
-echo "Couldn't issue database query<br />";
-
-echo mysqli_error($dbc);
-
-}
-
-// Close connection to the database
-mysqli_close($dbc);
+		 include 'sub/footer.php';
 
 ?>
-</body>
-<html/>

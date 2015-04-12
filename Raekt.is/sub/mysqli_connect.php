@@ -5,10 +5,15 @@
 // and imported when needed
  
 // Defined as constants so that they can't be changed
-DEFINE ('DB_USER', 'root');
-DEFINE ('DB_PASSWORD', '');
-DEFINE ('DB_HOST', 'localhost');
-DEFINE ('DB_NAME', 'gym');
+//DEFINE ('DB_USER', 'root');
+//DEFINE ('DB_PASSWORD', '');
+//DEFINE ('DB_HOST', 'localhost');
+//DEFINE ('DB_NAME', 'gym');
+
+DEFINE ('DB_USER', 'hopur24');
+DEFINE ('DB_PASSWORD', 'hopur24pass');
+DEFINE ('DB_HOST', 'mysql.raekt.com');
+DEFINE ('DB_NAME', 'raektis_gym');
  
 // $dbc will contain a resource link to the database
 // @ keeps the error from showing in the browser

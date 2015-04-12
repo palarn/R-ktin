@@ -1,0 +1,17 @@
+#result_box {
+    background-color: #57267b;
+    color: white;
+    margin: 0.5em;
+    font-size: 1.5em;
+}
+
+.fixed{
+	position: fixed;	
+}
+
+@media (max-width: 767px) {
+	#result_box {
+    
+   	 font-size: 0.8em;
+	}
+}
