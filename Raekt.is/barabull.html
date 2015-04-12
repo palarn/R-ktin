@@ -1,21 +1,25 @@
+<!DOCTYPE html>
 <html>
 	<head>
-		<title>Admin </title>
+		<title>Admin kerfi</title>
 	</head>
 <body>
 
 <?php
+//require_once('mysqli_connect.php');
 //tengjast hostinum
 	if(isset($_POST['update']))
 	{
-		$dbhost = 'localhost';
-		$dbuser = 'root';
-		$dbpass = '';
-		$conn = mysql_connect($dbhost, $dbuser, $dbpass);
+		$dbhost = 'mysql.raekt.com';
+		$dbuser = 'hopur24';
+		$dbname = "raektis_gym";
+		$dbpass = 'hopur24pass';
+		$conn = @mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 			if(! $conn )
 				{
 			  die('Could not connect: ' . mysql_error());
 				}
+		
 		//variable í töflunni
 		$id = $_POST['id'];
 		$title = $_POST['title'];
@@ -27,23 +31,25 @@
     	   "SET title = $title ".
     	   "WHERE id = $id" ;
 
-		mysql_select_db('mygym');
-		$retval = mysql_query( $sql, $conn );
+		//mysql_select_db('mygym');
+		$retval = mysql_query( $conn, $sql );
 			if(! $retval )
 				{
 			  die('Could not update data: ' . mysql_error());
 				}
 					echo "Updated data successfully\n";
-					mysql_close($conn);
+					mysql_close($dbc);
 				}
 			else
 				{
+
 ?>
-<form method="post" action="database\SQlite test\db\lol.sql">
+
+<form method="post" action="">
 	<table width="400" border="0" cellspacing="1" cellpadding="2">
 	<tr>
 		<td width="100">Raekt ID</td>
-		<td><input name="id" type="text" id="emp_id"></td>
+		<td><input name="id" type="text" id="id"></td>
 	</tr>
 	<tr>
 		<td width="100">title</td>
