@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="is">
 	<head>
@@ -5,12 +7,16 @@
 		<title>Admin kerfi</title>
 	</head>
 <body>
-<h1> Eyða stöð </h1>
-<a href="http://raekt.com/editstod.php/">
-    <button>Breyta upplýsingum um stöð</button>
+
+
+
+
+<h1> Breyta upplýsingum um líkamsræktarstöðvar </h1>
+<a href="http://raekt.com/login/addstod.php/">
+    <button>Bæta við stöð</button>
 </a>
-<a href="http://raekt.com/addstod.php/">
-    <button>Bæta inn nýrri stöð</button>
+<a href="http://raekt.com/login/deletestod.php/">
+    <button>Eyða stöð</button>
 </a><br>
 <a> Setja þarf "" utan um title<a> <br>
 <a> id á líkamsræktarstöðvum er eftirfarandi:<a>
@@ -33,6 +39,7 @@
 	<li>Hreyfing - Reykjavik		</li>
 <ol>
 <br>
+
 <?php
 
 //tengjast hostinum
@@ -57,12 +64,14 @@
 		$XIIman = $_POST['XIIman'];
 		$staerd = $_POST['staerd'];
 		$hoptimar = $_POST['hoptimar'];
-		$postnr = $_POST['postnr'];
+		$postnumer = $_POST['postnumer'];
 		$stadur = $_POST['stadur'];
 
 		//update'um töfluna
+		$sql = "UPDATE stodvar ".
+    	   "SET title = $title, Iman = $Iman, IIIman = $IIIman, VIman = $VIman, XIIman = $XIIman, staerd = $staerd, hoptimar = $hoptimar ".
+    	   "WHERE id = $id" ;
 
-    	$sql = "DELETE FROM stodvar WHERE id=$id";
 
 
 		mysqli_select_db($dbc, "data_base");
@@ -78,7 +87,6 @@
 				{
 
 
-
 ?>
 
 <form method="post" action="">
@@ -87,15 +95,51 @@
 		<td width="100">Raekt ID</td>
 		<td><input name="id" type="text" id="id"></td>
 	</tr>
-
+	<tr>
+		<td width="100">title</td>
+		<td><input name="title" type="text" id="title"></td>
+	</tr>
+	<tr>
+		<td width="100">1 mánuður</td>
+		<td><input name="Iman" type="text" id="Iman"></td>
+	</tr>
+	<tr>
+		<td width="100">3 mánuðir</td>
+		<td><input name="IIIman" type="text" id="IIIman"></td>
+	</tr>
+	<tr>
+		<td width="100">6 mánuðir</td>
+		<td><input name="VIman" type="text" id="VIman"></td>
+	</tr>
+	<tr>
+		<td width="100">12 mánuðir</td>
+		<td><input name="XIIman" type="text" id="XIIman"></td>
+	</tr>
+	<tr>
+		<td width="100">Stærð</td>
+		<td><input name="staerd" type="text" id="staerd"></td>
+	</tr>
+	<tr>
+		<td width="100">Hóptímar</td>
+		<td><input name="hoptimar" type="text" id="hoptimar"></td>
+	</tr>
+		<td width="100">Póstnúmer</td>
+		<td><input name="postnr" type="text" id="postnr"></td>
+	</tr>
+	<tr>
+		<td width="100">Staður</td>
+		<td><input name="stadur" type="text" id="stadur"></td>
+	</tr>
 	<td>
-		<input name="update" type="submit" id="update" value="Delete">
+		<input name="update" type="submit" id="update" value="Update">
 	</td>
 	</table>
+
 </form>
 
 <?php
 	}
+
 ?>
 </body>
 </html>

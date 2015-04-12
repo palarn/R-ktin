@@ -25,11 +25,14 @@
 					echo '<table align="center">
 
 								<tr><td align="left"><b>Stöð:</b></td><td align="right">'. $row['title'] .'</td></tr>
-								<tr><td align="left"><b>1 mán:</b></td><td align="right">'. $row['Iman'] .'</td></tr>
-								<tr><td align="left"><b>3 mán:</b></td><td align="right">'. $row['IIIman'] .'</td></tr>
-								<tr><td align="left"><b>6 mán:</b></td><td align="right">'. $row['VIman'] .'</td></tr>
-								<tr><td align="left"><b>Ár:</b></td><td align="right">'. $row['XIIman'] .'</td></tr>
-								<tr><td align="left"><b>Stærð:</b></td><td align="right">'. $row['staerd'] .'</td></tr>
+								<tr><td align="left"><b>1 mán:</b></td><td align="right">'. $row['Iman'] .' kr</td></tr>
+								<tr><td align="left"><b>3 mán:</b></td><td align="right">'. $row['IIIman'] .' kr</td></tr>
+								<tr><td align="left"><b>6 mán:</b></td><td align="right">'. $row['VIman'] .' kr</td></tr>
+								<tr><td align="left"><b>Ár:</b></td><td align="right">'. $row['XIIman'] .' kr</td></tr>
+								<tr><td align="left"><b>Stærð:</b></td><td align="right">'. $row['staerd'] .' fm</td></tr>
+								<tr><td align="left"><b>Staður:</b></td><td align="right">'. $row['stadur'] .'</td></tr>
+								<tr><td align="left"><b>Hóptímar:</b></td><td align="right">'. $row['hoptimar'] .'</td></tr>
+
 							</table>';
 					echo "</div>";
 				}
@@ -41,11 +44,13 @@
 					echo '<table align="center">
 
 								<tr><td align="left"><b>Stöð:</b></td><td align="right">'. $row['title'] .'</td></tr>
-								<tr><td align="left"><b>1 mán:</b></td><td align="right">'. $row['Iman'] .'</td></tr>
-								<tr><td align="left"><b>3 mán:</b></td><td align="right">'. $row['IIIman'] .'</td></tr>
-								<tr><td align="left"><b>6 mán:</b></td><td align="right">'. $row['VIman'] .'</td></tr>
-								<tr><td align="left"><b>Ár:</b></td><td align="right">'. $row['XIIman'] .'</td></tr>
-								<tr><td align="left"><b>Stærð:</b></td><td align="right">'. $row['staerd'] .'</td></tr>
+								<tr><td align="left"><b>1 mán:</b></td><td align="right">'. $row['Iman'] .' kr</td></tr>
+								<tr><td align="left"><b>3 mán:</b></td><td align="right">'. $row['IIIman'] .' kr</td></tr>
+								<tr><td align="left"><b>6 mán:</b></td><td align="right">'. $row['VIman'] .' kr</td></tr>
+								<tr><td align="left"><b>Ár:</b></td><td align="right">'. $row['XIIman'] .' kr</td></tr>
+								<tr><td align="left"><b>Stærð:</b></td><td align="right">'. $row['staerd'] .' fm</td></tr>
+								<tr><td align="left"><b>Staður:</b></td><td align="right">'. $row['stadur'] .'</td></tr>
+								<tr><td align="left"><b>Hóptímar:</b></td><td align="right">'. $row['hoptimar'] .'</td></tr>								
 							</table>';
 					echo "</div>";
 				}

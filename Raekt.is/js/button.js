@@ -1,7 +1,9 @@
 $(document).ready(function(){
+
+
 	var toggle = 0;
 	var first_box;
-    $('.btn-lg').click(function(){
+    $('.gymbutton').click(function(){
     	toggle++;
     	if (toggle>2) {
     		toggle=1;

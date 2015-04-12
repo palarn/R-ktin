@@ -6,10 +6,10 @@
 	</head>
 <body>
 <h1> Bæta við nýrri stöð </h1>
-<a href="http://raekt.com/editstod.php/">
+<a href="http://raekt.com/login/editstod.php/">
     <button>Breyta upplýsingum um stöð</button>
 </a>
-<a href="http://raekt.com/deletestod.php/">
+<a href="http://raekt.com/login/deletestod.php/">
     <button>Eyða stöð</button>
 </a><br>
 <a> Setja þarf "" utan um title<a><br>

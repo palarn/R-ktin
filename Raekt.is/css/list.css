@@ -5,6 +5,15 @@
     font-size: 1.5em;
 }
 
+.gymbutton{
+	color:#57267b;
+}
+
+.selectbutton{
+	background-color: #57267b;
+	color:white;
+}
+
 .fixed{
 	position: fixed;	
 }
