@@ -1,0 +1,26 @@
+#up_container{
+	margin-left: 15%;
+	font-family: Avant Garde,Avantgarde,Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+	font-size: 20px
+}
+
+
+.img-rounded {
+    width:100px;
+    height:150px;
+    margin-top:55px;
+    position:relative;
+    display:inline-block;
+    overflow:hidden;
+}
+
+div > img {
+    position:absolute;
+    top:50%;
+    min-height:100%;
+    display:block;
+    left:50%;
+    -webkit-transform: translate(-50%, -50%);
+    min-width:100%;
+}
+}
