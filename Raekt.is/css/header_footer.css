@@ -4,6 +4,11 @@
   font-family: Impact, Charcoal, sans-serif;
 }
 
+.navbar-static-bottom{
+margin-top: 60px;
+bottom: 0;
+}
+
 @media (min-width: 767px) {
   .navbar-fixed-top{
     min-height: 4em;
