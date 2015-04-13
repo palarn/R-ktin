@@ -1,0 +1,102 @@
+<!-- Páll Arnar Pálsson, 17. febrúar 2015 -->
+
+<!DOCTYPE html>
+<html lang="is">
+	<head>
+		<meta charset="utf-8">
+		<title>Rækt.is</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/header_footer.css" rel="stylesheet">
+		<link href="css/jumbo.css" rel="stylesheet">
+		<link href="css/raektir.css" rel="stylesheet">
+
+
+	</head>
+	<body>
+		<script src = "http://code.jquery.com/jquery-1.11.2.min.js"></script>
+		<script src = "js/jquery-1.11.2.min.js"></script>
+		<script src = "js/bootstrap.js"></script>
+		<script src = "js/jumbo.js"></script>
+		<script src = "js/reebokstodvar.js"></script>
+
+
+		<div class ="navbar navbar-default navbar-static-top">
+			<div class="container">
+				
+				
+
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="#" class="navbar-brand">Rækt.is</a>
+				</div>
+				<div class="collapse navbar-collapse navHeaderCollapse">
+					
+					<ul class="nav navbar-nav navbar-right">
+					
+						<li><a href="index.html">Heim</a></li>
+						<li><a href="samanburdur.html">Samanburdur</a></li>
+						<li class="dropdown active">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Ræktir <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="raekt1.html">World Class</a></li>
+								<li><a href="raekt2.html">Hress</a></li>
+								<li><a href="raekt3.html">Sporthúsið</a></li>
+								<li><a href="#">Reebok Fitness</a></li>
+								<li><a href="raekt5.html">Hreyfing</a></li>
+							</ul>
+						</li>
+						<li><a href="um_okkur.html">Röðunartafla</a></li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+
+		
+<script>
+function loadFrame (elm){
+    var frame1 = document.getElementById('frame1');
+    frame1.src = elm.dataset.src;
+}
+</script>
+		
+
+<div class="container">
+	<div class="row">
+			<div class=".col-md-3 .col-sm-6" id ="logo">	
+				<img src="images/reebok.png" alt="world class"class="img-rounded">
+			</div>
+						<div class=".col-md-6 .col-sm-6">	
+							<div class=".col-md-6 .col-sm-6 fixed" id ="listi"></div>
+						</div>
+						<div class=".col-md-3 .col-sm-6">	
+							<div class=".col-md-6 .col-sm-6 fixed" id ="upplysingar"></div>
+						</div>
+    </div>
+</div>
+
+<div id="contcont">
+<div id="up_container">
+<h1> Reebok fitness </h1>
+<p> Reebok fitness rekur tvær útistöðvar á höfuðborgarsvæðinu. </p><br>
+<button type="button" class="btn btn-info" id="b1" data-src="http://ja.is/kort/?type=map&x=361650&y=407482&z=9&q=reebok%20fitness" onClick="loadFrame(this)">Kort</button><a id="hola" href="http://www.reebokfitness.is/">Reebok fitness - Holtagörðum</a><br>
+<button type="button" class="btn btn-info" id="b1" data-src="http://www.mobiletoones.com/downloads/wallpapers/funny_wallpapers/preview/23/33618-sorry-this-wallpaer-not-available.jpg" onClick="loadFrame(this)">Kort</button><a id="hola" href="http://www.reebokfitness.is/">Reebok fitness - Urðarhvarfi 2</a><br>
+
+
+</div>
+<iframe src="http://ja.is/kort/?type=map&x=361650&y=407482&z=9&q=reebok%20fitness" id="frame1" scrolling="no" width="600" height="450" frameborder="0" style="border:0"></iframe>
+</div>
+		<div class="navbar navbar-default navbar-fixed-bottom">
+			<div class="container">
+				<p class="navbar-text pull-left">Síða eftir hóp 24</p>
+				<a class="navbar-btn btn-default btn pull-right" href="mailto:pap5@hi.is">Hafðu samband</a>
+			</div>
+		</div>
+
+	</body>
+<html/>
