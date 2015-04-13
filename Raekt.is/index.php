@@ -14,12 +14,12 @@
 
 		<div class="bg">
 			<ul class="cb-slideshow">
-            <li><span>Image 01</span><div><h3>HÉR</h3></div></li>
-            <li><span>Image 02</span><div><h3>KOMA</h3></div></li>
-            <li><span>Image 03</span><div><h3>GÓÐAR</h3></div></li>
-            <li><span>Image 04</span><div><h3>OG</h3></div></li>
-            <li><span>Image 05</span><div><h3>GAGNLEGAR</h3></div></li>
-            <li><span>Image 06</span><div><h3>UPPLÝSINGAR</h3></div></li>
+            <li><span>Image 01</span><div><h3>BYRJAÐU</h3></div></li>
+            <li><span>Image 02</span><div><h3>STRAX</h3></div></li>
+            <li><span>Image 03</span><div><h3>Í DAG!</h3></div></li>
+            <li><span>Image 04</span><div><h3>VELDU</h3></div></li>
+            <li><span>Image 05</span><div><h3>ÞÍNA</h3></div></li>
+            <li><span>Image 06</span><div><h3>LÍKAMSRÆKT!</h3></div></li>
         </ul>
 		</div>
 
