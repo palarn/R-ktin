@@ -12,6 +12,7 @@ echo'
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<link type="text/css" rel="stylesheet" href="css/styles.css">
 		<link href="css/list.css" rel="stylesheet">
+		<link href="css/raektir.css" rel="stylesheet">
 
 
 	</head>
