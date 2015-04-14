@@ -4,7 +4,7 @@
 
 	echo'	<div class="navbar navbar-default navbar-static-bottom">
 				<div class="container">
-					<a class="navbar-btn btn-default btn pull-left" href="login/index.php">Síða eftir hóp 24</a>
+					<a class="navbar-btn btn-default btn pull-left" href="login/index.php">Innskráning</a>
 					<a class="navbar-btn btn-default btn pull-right" href="#contact" data-toggle="modal">Hafðu samband</a>
 				</div>
 			</div>
