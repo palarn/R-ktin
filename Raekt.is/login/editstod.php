@@ -50,8 +50,7 @@
 		DEFINE ('DB_HOST', 'mysql.raekt.com');
 		DEFINE ('DB_NAME', 'raektis_gym');
  
-		// $dbc will contain a resource link to the database
-		// @ keeps the error from showing in the browser
+
 		$dbc = @mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)
 		OR die('Could not connect to MySQL: ' .
 		mysqli_connect_error());
@@ -67,13 +66,13 @@
 		$postnumer = $_POST['postnumer'];
 		$stadur = $_POST['stadur'];
 
-		//update'um töfluna
+		
 		$sql = "UPDATE stodvar ".
     	   "SET title = $title, Iman = $Iman, IIIman = $IIIman, VIman = $VIman, XIIman = $XIIman, staerd = $staerd, hoptimar = $hoptimar ".
     	   "WHERE id = $id" ;
 
 
-
+    	//update'um töfluna, ef eitthvað kemur upp drepum við það og skilum error
 		mysqli_select_db($dbc, "data_base");
 		$retval = mysqli_query( $dbc, $sql );
 			if(! $retval )
