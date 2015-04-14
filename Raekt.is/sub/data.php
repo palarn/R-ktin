@@ -1,6 +1,5 @@
 <?php
-	// Get a connection for the database
-
+	//Innihald samanburdur.php
 	
 	echo '<div class="row">';
 

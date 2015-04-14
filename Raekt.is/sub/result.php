@@ -1,13 +1,16 @@
 <?php
 	
+	//Birtir gögn úr gagnagrunni varðandi þá líkamsræktarstöð sem var valinn í list.php
+
+	//Tengjast gagnagrunni
 	require_once('mysqli_connect.php');
 	
-
+	//Fær send gildi takka frá list.php
 	$check_value1 = $_GET['var1'];
 	$check_value2 = $_GET['var2'];
 
 
-
+	//Fyrirspurn í gagnagrunn eftir því hvaða takka var ýtt á
 	$test_box1 = "SELECT id, title, Iman, IIIman, VIman, XIIman, staerd, stadur, hoptimar, postnr FROM stodvar WHERE id=$check_value1";
 	$test_box2 = "SELECT id, title, Iman, IIIman, VIman, XIIman, staerd, stadur, hoptimar, postnr FROM stodvar WHERE id=$check_value2";
 
@@ -20,6 +23,7 @@
 	echo '<div class="container fixed">';
 	if($response2){
 				
+				//Sækir gögn og birtir í töflu
 				while($row = mysqli_fetch_array($response2)){
 					echo '<div class="col-md-4 col-xs-12" id="result_box">';
 					echo '<table align="center">
@@ -57,6 +61,7 @@
 			}
 	echo '</div>';
 
+	//Loka gagnagrunni
 	mysqli_close($dbc);	
 
 ?>

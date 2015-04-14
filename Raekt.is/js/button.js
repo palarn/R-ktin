@@ -1,3 +1,6 @@
+//Forrit sem gefur tökkum í samanburdur.php virkni. Þegar ýtt er á takka sendir hann gildi sitt í result.php sem sækjir þau gögn úr 
+//gagnagrunni sem takkin tilgreindi.
+
 $(document).ready(function(){
 
 
@@ -11,8 +14,8 @@ $(document).ready(function(){
         var clickBtnValue = $(this).val();
         var ajaxurl = 'sub/result.php',
         data =  {'change': clickBtnValue};
+        //Sendir gögnin í result.php
         $.post(ajaxurl, data, function (response) {
-            // Response div goes here.
             if (toggle==1) {
            	 	$('#data_content').load('sub/result.php?var1='+clickBtnValue+'&var2=0')
            	 	first_box=clickBtnValue;
